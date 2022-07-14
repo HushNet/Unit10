@@ -20,11 +20,15 @@ public class Program
             }
             catch (FormatException e)
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine("Неверное значение!");
+                Console.BackgroundColor = ConsoleColor.Black;
             }
             catch (Exception e)
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine(e.Message);
+                Console.BackgroundColor = ConsoleColor.Black;
             }
         }
     }
@@ -41,11 +45,16 @@ public class Logger : ILogger
 {
     public void EventSum()
     {
+        Console.BackgroundColor = ConsoleColor.DarkBlue;
         Console.WriteLine("Вычисления завершены");
+        Console.BackgroundColor = ConsoleColor.Black;
     }
 
     public void Result(int result)
     {
+        Console.BackgroundColor = ConsoleColor.DarkBlue;
         Console.WriteLine($"Результат: {result}");
+        Console.BackgroundColor = ConsoleColor.Black;
+        
     }
 }
